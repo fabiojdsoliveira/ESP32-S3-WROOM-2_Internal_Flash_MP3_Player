@@ -12,10 +12,10 @@ You can see a small video about this project at:
 - Compact and standalone design — no SD card required  
 
 ## Hardware
-- ESP32-S3-WROOM-2 module
+- ESP32-S3-DevKitC-1 (based on the ESP32-S3-WROOM-2 module)
 - 6 buttons  
-- MAX98357as a I²S amplifier
-- 3W speaker (limited by the amplifier)
+- MAX98357A I²S amplifier
+- 3W speaker (the amplifier limits to 3W)
 - A lot of jumper wires :)
 
 ![Hardware photo](images/hardware_stand_alone.jpg)
