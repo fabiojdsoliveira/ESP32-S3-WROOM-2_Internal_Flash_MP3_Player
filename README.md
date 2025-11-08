@@ -17,7 +17,7 @@ You can see a small video about this project at:
 - MAX98357as a I²S amplifier
 - 3W speaker (limited by the amplifier)
 - A lot of jumper wires :)
-![Hardware photo](images/hardware_stand_alone.png)
+![Hardware photo](images/hardware_stand_alone.jpg)
 
 ## How to Use
 1. Flash the firmware to your ESP32-S3 board, according to the configurations below.
