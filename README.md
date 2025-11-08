@@ -1,6 +1,10 @@
 # ESP32-S3-WROOM-2_Internal_Flash_MP3_Player
 An MP3 player based on the ESP32-S3-WROOM-2 that plays music stored in its internal flash.
 
+## Youtube
+You can see a small video about this project at:
+
+
 ## Features
 - Plays MP3 files directly from internal flash memory (limited size, only few musics...)  
 - Uses the ESP32-S3’s built-in USB and I²S peripherals  
@@ -16,8 +20,12 @@ An MP3 player based on the ESP32-S3-WROOM-2 that plays music stored in its inter
 
 ## How to Use
 1. Flash the firmware to your ESP32-S3 board, according to the configurations below.
-2. 
-3. Upload your MP3 files to the internal flash.  
-4. Connect via serial or USB to control playback.
+![Board photo](images/ESP_configurations.png)
+
+2. Upload your MP3 files to the internal flash using the following tool by earlephilhower:
+https://github.com/earlephilhower/arduino-littlefs-upload?tab=readme-ov-file
+
+3. Connect via serial or USB to see messages from the player, if you want to.
 
 ## License
+No license
