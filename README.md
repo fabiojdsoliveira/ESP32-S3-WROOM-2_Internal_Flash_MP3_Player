@@ -25,7 +25,7 @@ You can see a small video about this project at:
 2. Upload your MP3 files to the internal flash using the following tool by earlephilhower:
 https://github.com/earlephilhower/arduino-littlefs-upload?tab=readme-ov-file
 
-3. Connect via serial or USB to see messages from the player, if you want to.
+4. Connect via serial or USB to see messages from the player, if you want to.
 
 ## License
 No license
