@@ -4,6 +4,7 @@ An MP3 player based on the ESP32-S3-WROOM-2 that plays music stored in its inter
 ## Youtube
 You can see a small video about this project at:
 
+https://youtu.be/ir6k7f1B5vg
 
 ## Features
 - Plays MP3 files directly from internal flash memory (limited size, only few musics...)  
