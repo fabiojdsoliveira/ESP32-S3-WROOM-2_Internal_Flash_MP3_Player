@@ -18,7 +18,7 @@ You can see a small video about this project at:
 - 3W speaker (the amplifier limits to 3W)
 - A lot of jumper wires :)
 
-![Hardware photo](images/hardware_stand_alone.jpg)
+![Hardware photo](images/hardware.jpg)
 
 ## How to Use
 1. Flash the firmware to your ESP32-S3 board, according to the configurations below.
