@@ -18,6 +18,7 @@ https://youtu.be/ir6k7f1B5vg
 - MAX98357A I²S amplifier
 - 3W speaker (the amplifier limits to 3W)
 - A lot of jumper wires :)
+- See the code for more information about the connections
 
 ![Hardware photo](images/hardware.jpg)
 
