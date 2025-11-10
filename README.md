@@ -31,7 +31,7 @@ https://youtu.be/ir6k7f1B5vg
 
 https://github.com/earlephilhower/arduino-littlefs-upload?tab=readme-ov-file
 
-3. Connect via serial or USB to see messages from the player, if you want to.
+3. Connect via USB to see messages from the player, if you want to.
 
 ## License
 No license
