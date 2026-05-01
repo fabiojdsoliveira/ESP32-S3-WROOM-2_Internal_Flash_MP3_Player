@@ -403,6 +403,56 @@ void pauseTrack() {
 
 // -----------------------------------------------------------------------------------------------
 
+// Prints available serial commands to the Serial monitor
+void printSerialHelp() {
+  Serial.println("------------------------------------");
+  Serial.println("Serial commands available:");
+  Serial.println("  previous   -> Button Previous");
+  Serial.println("  play_pause -> Button Play/Pause");
+  Serial.println("  next       -> Button Next");
+  Serial.println("  down       -> Button Volume Decrease");
+  Serial.println("  mute       -> Button Volume Mute");
+  Serial.println("  up         -> Button Volume Increase");
+  Serial.println("  help       -> Show this menu");
+  Serial.println("------------------------------------");
+}
+
+// -----------------------------------------------------------------------------------------------
+
+// Reads serial input and simulates button presses
+void handleSerialCommand() {
+  if (!Serial.available()) return;
+
+  String cmd = Serial.readStringUntil('\n');
+  cmd.trim(); // removes \r, \n, spaces
+
+  if (cmd == "previous") {
+    Serial.println("[Serial] Simulating: Previous");
+    buttonPressed[0] = true;
+  } else if (cmd == "play_pause") {
+    Serial.println("[Serial] Simulating: Play/Pause");
+    buttonPressed[1] = true;
+  } else if (cmd == "next") {
+    Serial.println("[Serial] Simulating: Next");
+    buttonPressed[2] = true;
+  } else if (cmd == "down") {
+    Serial.println("[Serial] Simulating: Volume Decrease");
+    buttonPressed[4] = true;
+  } else if (cmd == "mute") {
+    Serial.println("[Serial] Simulating: Volume Mute");
+    buttonPressed[5] = true;
+  } else if (cmd == "up") {
+    Serial.println("[Serial] Simulating: Volume Increase");
+    buttonPressed[6] = true;
+  } else if (cmd == "help") {
+    printSerialHelp();
+  } else if (cmd.length() > 0) {
+    Serial.printf("[Serial] Unknown command: \"%s\". Type 'help' for options.\n", cmd.c_str());
+  }
+}
+
+// -----------------------------------------------------------------------------------------------
+
 // Configurations
 void setup() {
 
@@ -453,12 +503,17 @@ void setup() {
 
   // LED module turns green
   rgbLedWrite(rgb_module, 0, 50, 0);  delay(1);
+
+  // Print available serial commands
+  printSerialHelp();
 }
 
 // -----------------------------------------------------------------------------------------------
 
 // Main program
 void loop() {
+
+  handleSerialCommand();
 
   if (mp3 && mp3->isRunning()) {
     if (!inPause) {
@@ -594,5 +649,6 @@ void loop() {
     Serial.println("Button Volume Increase pressed...");
   }
 }
+
 
 
